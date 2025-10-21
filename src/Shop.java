@@ -36,4 +36,19 @@ public class Shop {
         return best;
     }
 
+    public static int maxMoneySpent(int[] keyboards, int[] usbs, int budget) {
+        int max = -1;
+
+        for (int k : keyboards) {
+            for (int u : usbs) {
+                int total = k + u;
+                if (total <= budget && total > max) {
+                    max = total;
+                }
+            }
+        }
+
+        return max;
+    }
+
 }
