@@ -25,4 +25,15 @@ public class Shop {
         return max;
     }
 
+    public static int mostExpensiveUsbWithinBudget(int[] usbs, int budget) {
+        int best = -1;
+
+        for (int u : usbs) {
+            if (u <= budget && u > best)
+                best = u;
+        }
+
+        return best;
+    }
+
 }
